@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg"
+        android:orientation="vertical">
+
+        <bidding.app.extra.MyTextView
+            android:textAlignment="center"
+            android:id="@+id/tv_alert"
+            android:layout_marginTop="10dp"
+            android:text="@string/manage_quntity"
+            android:layout_width="match_parent"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <bidding.app.extra.MyTextView
+            android:textAlignment="center"
+            android:id="@+id/tv_message"
+            android:layout_marginTop="10dp"
+            android:text="@string/manage_quntity"
+            android:layout_width="match_parent"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/black"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/ok"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:text="OK"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:fontFamily="@font/abc"
+                android:textColor="@color/colorAccent" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/black"></View>
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:fontFamily="@font/abc"
+                android:text="CANCEL"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llTop"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:weightSum="2">
+
+        <TextView
+            android:fontFamily="@font/proxima_nova_alt_regular_webfont"
+            android:id="@+id/text_profile"
+            android:layout_width="0dp"
+            android:textSize="20sp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textStyle="bold"
+            android:text="@string/profile"
+            android:background="@drawable/btn_active"
+            android:textColor="@color/light_yellow" />
+
+        <TextView
+            android:id="@+id/text_card"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/proxima_nova_alt_regular_webfont"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="4dp"
+            android:text="@string/creditcard"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layoutprofile"
+        layout="@layout/profilelayout"
+        android:visibility="visible" />
+
+
+    <include
+        android:id="@+id/cardlayout"
+        layout="@layout/cardlayout"
+        android:visibility="visible" />
+
+
+</LinearLayout>

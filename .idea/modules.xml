@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Bidding.iml" filepath="$PROJECT_DIR$/Bidding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oppwa.mobile-2.23.0/oppwa.mobile-2.23.0.iml" filepath="$PROJECT_DIR$/oppwa.mobile-2.23.0/oppwa.mobile-2.23.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oppwa.mobile.alipay-2.23.0/oppwa.mobile.alipay-2.23.0.iml" filepath="$PROJECT_DIR$/oppwa.mobile.alipay-2.23.0/oppwa.mobile.alipay-2.23.0.iml" />
+    </modules>
+  </component>
+</project>

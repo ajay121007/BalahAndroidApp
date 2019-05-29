@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/midle"
+        android:background="@drawable/btn_effect"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cas"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/proxima_nova_alt_regular_webfont"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/totalprice"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/proxima_nova_alt_regular_webfont"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/highestprice"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/proxima_nova_alt_regular_webfont" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/quntity"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/proxima_nova_alt_regular_webfont"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/product"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/proxima_nova_alt_regular_webfont" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/auction"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/proxima_nova_alt_regular_webfont" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

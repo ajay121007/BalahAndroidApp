@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_item1"
+        android:icon="@drawable/ic_icon_exit"
+        android:title="@string/exit" />
+    <item
+        android:id="@+id/action_item2"
+        android:icon="@drawable/ic_icon_profile"
+        android:title="@string/profile" />
+    <item
+        android:id="@+id/action_item3"
+        android:icon="@drawable/ic_icon_purchases"
+        android:title="@string/purchase" />
+    <item
+        android:id="@+id/action_item4"
+        android:icon="@drawable/ic_icon_shop"
+        android:title="@string/shop" />
+    <item
+        android:id="@+id/action_item5"
+        android:icon="@drawable/ic_icon_auction"
+        android:title="@string/auction" />
+</menu>

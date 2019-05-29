@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        //resConfigs "en", "fr", "pt-rBR"
+        applicationId "bidding.app"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/fonts'] } }
+
+}
+repositories {
+    maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local' }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:27.+'
+    compile 'com.android.support:design:27.1.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.35.0'
+    compile 'com.facebook.android:account-kit-sdk:4.22.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:cardview-v7:27.1.0'
+    compile 'com.android.support:recyclerview-v7:27.1.0'
+    compile 'com.skyfishjy.ripplebackground:library:1.0.1'
+    compile 'com.google.firebase:firebase-core:11.0.4'
+    compile 'com.google.firebase:firebase-messaging:11.0.4'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.google.code.gson:gson:2.6.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.google.android.gms:play-services-maps:11.0.4'
+    compile 'com.google.android.gms:play-services-location:11.0.4'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.jsibbold:zoomage:1.1.0-SNAPSHOT'
+    compile 'com.stripe:stripe-android:6.0.0'
+    compile 'io.card:android-sdk:5.5.0'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.10.0'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    compile project(':oppwa.mobile-2.23.0')
+    compile project(':oppwa.mobile.alipay-2.23.0')
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+}
+apply plugin: 'com.google.gms.google-services'

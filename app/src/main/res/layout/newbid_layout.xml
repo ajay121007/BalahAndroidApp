@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:andriod="http://schemas.android.com/tools"
+    android:background="@android:color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_weight="1" >
+            <include layout="@layout/headerlayout"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="278dp"
+                android:layout_height="287dp"
+                android:layout_gravity="center_horizontal">
+                <bidding.app.extra.CircularSeekBar
+                    android:id="@+id/circularSeekBar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:start_angle="270"
+                    app:end_angle="270"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:circle_x_radius="280dp"
+                    app:circle_y_radius="300dp"
+                    app:use_custom_radii="true"
+                    app:progress="0"
+                    android:layout_gravity="center"
+                    app:max="100"
+                    android:background="@drawable/ic_icon_inner_rotator_bg"
+                    app:pointer_alpha_ontouch="100"
+                    app:pointer_color="#aabbcc"
+                    app:pointer_halo_color="#ff0000"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/img"
+                        android:scaleType="fitXY"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_icon_inner_rotator_bg"
+                        android:layout_gravity="center" />
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/textviewcircle"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textview"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:drawableTop="@mipmap/circle" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:overScrollMode="always"
+                android:layout_marginBottom="10dp"
+                android:scrollbarStyle="outsideInset">
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

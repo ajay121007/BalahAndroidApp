@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".15">
+
+            <include layout="@layout/headerlayout" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".01">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_below="@+id/layout1"
+                android:background="#d8d8d8"></View>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".08">
+
+            <bidding.app.extra.MyTextView
+                android:id="@+id/textview"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_icon_textbox"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".51">
+
+            <RelativeLayout
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_icon_button_cricle"></RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center">
+
+                <bidding.app.extra.CircularSeekBar
+                    android:id="@+id/circularSeekBar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:elevation="8dp"
+                    android:focusableInTouchMode="false"
+                    app:circle_color="#edf0f4"
+                    app:circle_progress_color="@color/light_yellow"
+                    app:circle_stroke_width="12dp"
+                    app:end_angle="270"
+                    app:max="100"
+                    app:pointer_alpha_ontouch="100"
+                    app:progress="1"
+                    app:start_angle="270" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="185dp"
+                android:layout_height="185dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_icon_button_3"></RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/image_submitbid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/ic_icon_button_out" />
+
+                <ImageView
+                    android:id="@+id/iv_bid"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+        <!-- <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_weight=".47"
+             android:gravity="center"
+             android:visibility="gone">
+
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                 <bidding.app.extra.CircularSeekBar
+                     android:id="@+id/circularSeekBar1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:layout_centerInParent="true"
+                     android:layout_centerVertical="true"
+                     android:layout_gravity="center"
+                     android:background="@drawable/ic_icon_button_cricle"
+                     android:elevation="8dp"
+                     app:circle_color="#aabbcc"
+                     app:circle_fill="#757575"
+                     app:circle_progress_color="#e6bd06"
+                     app:circle_stroke_width="12dp"
+                     app:end_angle="270"
+                     app:max="100"
+                     app:pointer_alpha_ontouch="100"
+                     app:pointer_color="#aabbcc"
+                     app:pointer_halo_color="@android:color/white"
+                     app:progress="1"
+                     app:start_angle="270" />
+
+             </RelativeLayout>
+
+             <RelativeLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerInParent="true"
+                 android:padding="5dp">
+
+                 <ImageView
+                     android:id="@+id/img"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerInParent="true"
+                     android:layout_gravity="center"
+                     android:background="@drawable/ic_icon_button_out"
+                     android:scaleType="fitXY" />
+
+                 <com.skyfishjy.library.RippleBackground xmlns:android="http://schemas.android.com/apk/res/android"
+                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                     android:id="@+id/content"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     app:rb_color="#1D1D1E"
+                     app:rb_duration="3000"
+                     app:rb_radius="20dp"
+                     app:rb_rippleAmount="3"
+                     app:rb_scale="6">
+
+                     <ImageView
+                         android:id="@+id/image_submitbid"
+                         android:layout_width="75dp"
+                         android:layout_height="75dp"
+                         android:layout_centerHorizontal="true"
+                         android:layout_centerInParent="true"
+                         android:layout_centerVertical="true"
+                         android:background="@drawable/textviewcircle"
+                         android:onClick="" />
+                 </com.skyfishjy.library.RippleBackground>
+
+
+             </RelativeLayout>
+         </RelativeLayout>-->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".08"
+            android:gravity="center">
+
+
+            <LinearLayout
+                android:id="@+id/time_layout"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/time1"
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/ic_icon_time_button"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="0844"
+                    android:textColor="@color/gray"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/time2"
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/ic_icon_time_button"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:text="08"
+                    android:textColor="@color/gray"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/time3"
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/ic_icon_time_button"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:text="08"
+                    android:textColor="@color/gray"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <bidding.app.extra.MyTextView
+                android:id="@+id/text_timer"
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout1"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:text="00:00:00"
+                android:textSize="15dp"
+                android:visibility="gone" />
+
+            <bidding.app.extra.MyTextView
+                android:id="@+id/tv_timeover"
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_icon_time_box"
+                android:gravity="center"
+                android:text="@string/timeover"
+                android:textSize="15dp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight=".18"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/iv_add"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/home_list_bg"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_icon_add" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/home_list_bg"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

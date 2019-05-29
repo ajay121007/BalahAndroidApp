@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".view.activity.paymentactivity.CustomActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:contentInsetEnd="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetStart="0dp"
+        android:gravity="center_horizontal"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_icon_back_arrow" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/proxima_nova_alt_regular_webfont"
+                    android:gravity="center"
+                    android:text="Bal"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova_alt_regular_webfont"
+                    android:gravity="center"
+                    android:text="ah"
+                    android:textColor="@color/green"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/llTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="8dp"
+            android:text="@string/total_amount_to_be_paid"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:id="@+id/tvTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:padding="8dp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llTotal"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rl_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:visibility="gone"
+            android:id="@+id/holder_text_input_layout"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/holder_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="@string/card_holder_hint"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="16dp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:visibility="gone"
+            android:id="@+id/number_text_input_layout"
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/holder_text_input_layout"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/number_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="@string/card_number_hint"
+                android:inputType="number"
+                android:maxLength="20"
+                android:textSize="16dp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/payment_method_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@id/number_text_input_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/visa"
+            android:src="@drawable/visa"
+            android:tint="@color/colorAccent" />
+
+        <android.support.design.widget.TextInputLayout
+            android:visibility="gone"
+            android:id="@+id/expiry_month_text_input_layout"
+            style="@style/TextInputLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/number_text_input_layout"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/expiry_month_edit_text"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="@string/card_expiry_month_hint"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textSize="16dp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/expiry_date_delimiter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/expiry_month_text_input_layout"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@id/expiry_month_text_input_layout"
+            android:layout_toRightOf="@id/expiry_month_text_input_layout"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/date_delimiter"
+            android:textSize="16dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:visibility="gone"
+            android:id="@+id/expiry_year_text_input_layout"
+            style="@style/TextInputLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/number_text_input_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/expiry_date_delimiter"
+            android:layout_toRightOf="@id/expiry_date_delimiter">
+
+            <EditText
+                android:id="@+id/expiry_year_edit_text"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="@string/card_expiry_year_hint"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textSize="16dp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:visibility="gone"
+            android:id="@+id/cvv_text_input_layout"
+            style="@style/TextInputLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/number_text_input_layout"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/expiry_year_text_input_layout"
+            android:layout_toRightOf="@id/expiry_year_text_input_layout">
+
+            <EditText
+                android:id="@+id/cvv_edit_text"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="@string/card_cvv_hint"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textSize="16dp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/button_pay_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cvv_text_input_layout"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/home_list_bg"
+            android:fontFamily="@font/proxima_nova_alt_regular_webfont"
+            android:gravity="center_horizontal"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:text="@string/button_pay_now"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_card_view"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_modes"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_payment_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/gray" />
+    </LinearLayout>
+
+</RelativeLayout>
